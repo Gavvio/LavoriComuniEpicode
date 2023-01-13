@@ -9,6 +9,7 @@ import { ToDoService } from 'src/app/to-do.service';
 })
 export class CompletatiComponent implements OnInit {
   todos:ToDo[]=[];
+  controllo:boolean=false;
   constructor(private td:ToDoService) { }
 
   ngOnInit(): void {
@@ -16,6 +17,7 @@ export class CompletatiComponent implements OnInit {
   }
   async prova(){
     this.todos=await this.td.getFiltered(true);
+    this.controllo=true;
   }
   async elimina(id:number){
     const momToDo:ToDo={id:id,title:"annamoooooo",completed:true}

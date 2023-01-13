@@ -1,3 +1,9 @@
-<div class="container" *ngFor="let todo of todos">{{todo.title}}
-  <div class="btn" (click)="elimina(todo.id)">elimina</div>
+<div *ngIf="!controllo">recupero task...</div>
+<div *ngIf="controllo && todos.length == 0">nessun task completato trovato</div>
+
+<div *ngIf="controllo && todos.length > 0">
+  <div class="container" *ngFor="let todo of todos">
+    {{ todo.title }}
+    <div class="btn" (click)="elimina(todo.id)">elimina</div>
+  </div>
 </div>

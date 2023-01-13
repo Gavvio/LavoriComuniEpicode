@@ -19,15 +19,12 @@ export class ToDoComponent implements OnInit {
 
   }
   async prova(){
-    console.log(this.controllo);
     this.todos=await this.td.getFiltered(false);
-    if(this.todos!=undefined){
-      this.controllo=true;
-    }
+    this.controllo=true;
   }
   async aggiungi(){
     const todoMom:ToDo={id:1,title:this.nuovoToDo,completed:false}
-    console.log(this.nuovoToDo)
+    this.controllo=false;
     this.td.add(todoMom);
     this.prova();
   }
