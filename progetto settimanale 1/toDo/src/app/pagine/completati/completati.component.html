@@ -1,0 +1,3 @@
+<div class="container" *ngFor="let todo of todos">{{todo.title}}
+  <div class="btn" (click)="elimina(todo.id)">elimina</div>
+</div>

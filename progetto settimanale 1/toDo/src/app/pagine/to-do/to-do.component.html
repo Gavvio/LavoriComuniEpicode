@@ -1,0 +1,19 @@
+<div *ngif="controllo==false">
+  recupero task...
+</div>
+<div *ngif="controllo">ciao</div>
+<div *ngIf="controllo && todos.length==0">
+nessun task trovato
+</div>
+<div *ngIf="controllo && todos.length>0">
+  <div class="container" *ngFor="let todo of todos">{{todo.title}}
+    <div class="btn" (click)="aggiorna(todo.id)">fatto</div>
+    <div class="btn" (click)="elimina(todo.id)">elimina</div>
+  </div>
+</div>
+
+
+
+
+<input type="text" placeholder="nuova cosa" class="form-control" [(ngModel)]="nuovoToDo">
+<button type="button" class="btn btn-primary me-2" (click)="aggiungi()">inserisci</button>
