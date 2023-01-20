@@ -8,20 +8,20 @@ import { AppComponent } from './app.component';
 const routes: Routes = [
   {
     path: '',
-    component: HomeComponent
+    component: HomeComponent,
   },
   {
-    path:'todo',
-    component:ToDoComponent
+    path: 'todo',
+    component: ToDoComponent,
   },
   {
     path: 'completati',
-    component: CompletatiComponent
-  }
+    component: CompletatiComponent,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
