@@ -3,7 +3,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { ToDoComponent } from './pagine/to-do/to-do.component';
 import { CompletatiComponent } from './pagine/completati/completati.component';
 import { HomeComponent } from './pagine/home/home.component';
-import { AppComponent } from './app.component';
 
 const routes: Routes = [
   {

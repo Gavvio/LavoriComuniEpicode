@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div class="container mt-5 mx-5 d-flex justify-content-center">
   <div *ngIf="!controllo">recupero task...</div>
   <div *ngIf="controllo && todos.length == 0">
@@ -76,5 +77,35 @@
         inserisci
       </button>
     </div>
+=======
+<div *ngIf="!controllo">recupero task...</div>
+<div *ngIf="controllo && todos.length == 0">
+  nessun task trovato
+  <input
+    type="text"
+    placeholder="nuova cosa"
+    class="form-control"
+    [(ngModel)]="nuovoToDo"
+  />
+  <button type="button" class="btn btn-primary me-2" (click)="aggiungi()">
+    inserisci
+  </button>
+</div>
+
+<div *ngIf="controllo && todos.length > 0">
+  <div class="container" *ngFor="let todo of todos">
+    {{ todo.title }}
+    <div class="btn" (click)="aggiorna(todo.id)">fatto</div>
+    <div class="btn" (click)="elimina(todo.id)">elimina</div>
+    <input
+      type="text"
+      placeholder="nuova cosa"
+      class="form-control"
+      [(ngModel)]="nuovoToDo"
+    />
+    <button type="button" class="btn btn-primary me-2" (click)="aggiungi()">
+      inserisci
+    </button>
+>>>>>>> 494a42476b5831919841c1e57e157752da90920d
   </div>
 </div>
