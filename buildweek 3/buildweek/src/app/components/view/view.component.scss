@@ -1,7 +1,60 @@
-#titolo_view {
-    // backdrop-filter: blur(10px);
-    font-family: 'Permanent Marker', cursive;
-    font-size: 60px;
-    color: rgb(23, 60, 97);
-    cursor: pointer;
+.reverendo {
+    background-image: url(../../../assets/IMG/cielo_normale.jpg);
+    background-size: cover;
+    height: 100vh;
+}
+
+.plum {
+    background-image: url(../../../assets/IMG/casa_americana.jpg);
+    background-size: cover;
+    height: 100vh;
+}
+
+.mustard {
+    background-image: url(../../../assets/IMG/western.jpg);
+    background-size: cover;
+    height: 100vh;
+}
+
+.peacock {
+    background-image: url(../../../assets/IMG/tempesta.jpg);
+    background-size: cover;
+    height: 100vh;
+}
+
+.joker {
+    background-image: url(../../../assets/IMG/cards.jpg);
+    background-size: cover;
+    height: 100vh;
+}
+
+.scarlet {
+    background-image: url(../../../assets/IMG/petali.jpg);
+    background-size: cover;
+    height: 100vh;
+}
+
+.cable {
+    background-image: url(../../../assets/IMG/deadpool.jpg);
+    background-size: cover;
+    height: 100vh;
+}
+
+.thanos {
+    background-image: url(../../../assets/IMG/notte_stellato.jpg);
+    background-size: cover;
+    height: 100vh;
+}
+
+.contenitore_card,
+.immagine_card {
+    filter: drop-shadow(3px 0 3px #000);
+}
+
+.contenitore_card {
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+.immagine_card {
+    object-fit: cover;
 }
