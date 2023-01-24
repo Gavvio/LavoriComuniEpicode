@@ -2,10 +2,18 @@ html {
     scroll-behavior: smooth;
 }
 
+.home {
+    background-image: url(../../../assets/IMG/sfondo_legno.jpg);
+    background-size: contain;
+    background-repeat: repeat;
+}
+
 #navbar {
-    background-color: white;
+    background-color: rgba(222, 184, 135, 0.4);
     position: sticky;
+    border-radius: 0 0 5px 5px;
     top: 0;
+    z-index: 1;
     height: 100px;
 }
 
@@ -20,7 +28,9 @@ html {
 #intestazione {
     position: sticky;
     top: 100px;
-    background-color: white;
+    border-radius: 0 0 5px 5px;
+    z-index: 1;
+    background-color: rgba(222, 184, 135, 0.4);
 }
 
 #btn_aggiungi_post {
@@ -79,9 +89,13 @@ html {
 #riga {
     height: 140px;
     cursor: pointer;
+    transition: 0.4s cubic-bezier(0.215, 0.610, 0.355, 1);
 
     &:hover {
-        background-color: rgb(248, 248, 248);
+        background-color: rgba(222, 184, 135, 0.3);
+        transform: scale(1.01);
+        border-radius: 5px;
+        box-shadow: 1px 1px 1px #000;
     }
 }
 

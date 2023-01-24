@@ -1,10 +1,16 @@
-.reverendo {
+.reverendo,
+.plum,
+.mustard,
+.peacock,
+.joker,
+.scarlet,
+.cable,
+.thanos {
     background-image: url(../../../assets/IMG/cielo_normale.jpg);
     background-size: cover;
     height: 100vh;
 
     #titolo_edit {
-        // backdrop-filter: blur(10px);
         font-family: 'Permanent Marker', cursive;
         font-size: 60px;
         color: rgb(23, 60, 97);
@@ -14,99 +20,49 @@
 
 .plum {
     background-image: url(../../../assets/IMG/casa_americana.jpg);
-    background-size: cover;
-    height: 100vh;
-
-    #titolo_edit {
-        // backdrop-filter: blur(10px);
-        font-family: 'Permanent Marker', cursive;
-        font-size: 60px;
-        color: rgb(23, 60, 97);
-        cursor: pointer;
-    }
 }
 
 .mustard {
     background-image: url(../../../assets/IMG/western.jpg);
-    background-size: cover;
-    height: 100vh;
 
     #titolo_edit {
-        // backdrop-filter: blur(10px);
-        font-family: 'Permanent Marker', cursive;
-        font-size: 60px;
         color: rgb(147, 182, 218);
-        cursor: pointer;
     }
 }
 
 .peacock {
     background-image: url(../../../assets/IMG/tempesta.jpg);
-    background-size: cover;
-    height: 100vh;
 
     #titolo_edit {
-        // backdrop-filter: blur(10px);
-        font-family: 'Permanent Marker', cursive;
-        font-size: 60px;
         color: rgb(147, 182, 218);
-        cursor: pointer;
     }
 }
 
 .joker {
     background-image: url(../../../assets/IMG/cards.jpg);
-    background-size: cover;
-    height: 100vh;
 
     #titolo_edit {
-        // backdrop-filter: blur(10px);
-        font-family: 'Permanent Marker', cursive;
-        font-size: 60px;
         color: rgb(147, 182, 218);
-        cursor: pointer;
     }
 }
 
 .scarlet {
     background-image: url(../../../assets/IMG/petali.jpg);
-    background-size: cover;
-    height: 100vh;
-
-    #titolo_edit {
-        // backdrop-filter: blur(10px);
-        font-family: 'Permanent Marker', cursive;
-        font-size: 60px;
-        color: rgb(23, 60, 97);
-        cursor: pointer;
-    }
 }
 
 .cable {
     background-image: url(../../../assets/IMG/deadpool.jpg);
-    background-size: cover;
-    height: 100vh;
 
     #titolo_edit {
-        // backdrop-filter: blur(10px);
-        font-family: 'Permanent Marker', cursive;
-        font-size: 60px;
         color: rgb(147, 182, 218);
-        cursor: pointer;
     }
 }
 
 .thanos {
     background-image: url(../../../assets/IMG/notte_stellato.jpg);
-    background-size: cover;
-    height: 100vh;
 
     #titolo_edit {
-        // backdrop-filter: blur(10px);
-        font-family: 'Permanent Marker', cursive;
-        font-size: 60px;
         color: rgb(147, 182, 218);
-        cursor: pointer;
     }
 }
 
@@ -116,11 +72,13 @@
 }
 
 .contenitore_card {
-    background-color: rgba(255, 255, 255, 0.75);
+    background-color: rgba(255, 255, 255, 0.7);
     border-radius: 5px;
     padding: 10px;
 }
 
 .immagine_card {
+    width: 175px;
+    height: 175px;
     object-fit: cover;
 }
