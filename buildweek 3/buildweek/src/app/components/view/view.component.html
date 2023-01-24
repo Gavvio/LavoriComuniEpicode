@@ -1,1 +1,12 @@
-<p>view works!</p>
+<button class="btn btn-danger ms-5" (click)="tornaHome()">Back</button>
+<div *ngIf="post" class="card w-50 m-3">
+    <div class="card-header" appHighLight>Post</div>
+    <div class="card-body">
+        <h5 class="card-title">{{ post.title}}</h5>
+        <p class="card-text">{{ post.body }}</p>
+        <div class="d-flex justify-content-around">
+            <p class="card-text">Categoria: {{ post.id}}</p>
+            <p class="card-text">Autore: {{ post.userId }}</p>
+        </div>
+    </div>
+</div>

@@ -10,14 +10,18 @@ import { Post } from 'src/app/post.interface';
     styleUrls: ['./create.component.scss'],
 })
 export class CreateComponent implements OnInit {
+
     post: Post={
         userId: 0,
         title: '',
         body: '',
         id: ''
     };
+
     posts: Post[] = [];
+
     merdaccia:string='';
+
     constructor(private ps: PostsService, private http: HttpClient) {}
     ngOnInit(): void {}
 
@@ -42,5 +46,6 @@ export class CreateComponent implements OnInit {
         indiceMaggiore++;
         this.post.id = indiceMaggiore.toString();
         this.ps.create(this.post)
+
     }
 }

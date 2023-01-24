@@ -1,1 +1,12 @@
-<p>edit works!</p>
+<button class="btn btn-danger ms-5" (click)="tornaHome()">Back</button>
+
+<form class="text-center" #form="ngForm" (ngSubmit)="modifica(form)">
+    <h4>Title:</h4>
+    <input class="p-3 border rounded form-control w-50 mx-auto"  name="title" type="text" [ngModel]='post.title'>
+    <h4 class="my-2">Body:</h4>
+    <textarea class="p-3 border rounded form-control w-50 mx-auto" ngModel name="body" cols="30" rows="5" [ngModel]="post.body"></textarea>
+
+    <div class="d-flex justify-content-center mt-2">
+        <button class="btn btn-danger" type="submit">Modifica</button>
+    </div>
+</form>

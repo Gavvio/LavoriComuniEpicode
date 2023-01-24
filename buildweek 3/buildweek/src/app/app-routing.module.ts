@@ -10,17 +10,17 @@ const routes: Routes = [
     {
         path: '',
         component: HomeComponent,
-        children: [
-            {
-                path: 'view',
-                component: ViewComponent,
-            },
-            {
-                path: 'edit',
-                component: EditComponent,
-            },
-        ],
     },
+
+    {
+        path: 'view/:id',
+        component: ViewComponent,
+    },
+    {
+        path: 'edit/:id',
+        component: EditComponent,
+    },
+
     {
         path: 'create',
         component: CreateComponent,

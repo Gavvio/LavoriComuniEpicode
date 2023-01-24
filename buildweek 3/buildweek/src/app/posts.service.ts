@@ -9,8 +9,9 @@ import { Router } from '@angular/router';
 })
 export class PostsService {
   link: string = 'https://63ce47bf6d27349c2b6a74a0.mockapi.io/post/';
-  passaggioId:number=0;
+
   constructor(private http: HttpClient, private router:Router) {}
+
 
   getPosts() {
     return this.http.get<Post[]>(this.link).pipe(
@@ -20,14 +21,17 @@ export class PostsService {
     );
   }
 
-  view(){
 
+  edit(id:string,post:Post) {
+    this.http.put<Post>(this.link+id,post).subscribe(()=>{
+        this.torna()
+    })
   }
 
-  edit() {}
-
   create(post:Post){
-    this.http.post('https://63ce47bf6d27349c2b6a74a0.mockapi.io/post/', post).subscribe();
+    this.http.post(this.link, post).subscribe(()=>{
+        this.torna()
+    })
   }
 
   delete(id: string) {
@@ -47,9 +51,6 @@ export class PostsService {
     } else {
       messaggio = 'PROBLEMI GENERICI';
     }
-  }
-  passaId(id:number){
-
   }
 
 }
