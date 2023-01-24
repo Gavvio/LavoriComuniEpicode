@@ -48,7 +48,7 @@
         <div class="col-2 d-flex">
             <div id="btn_cerca_post" class="align-items-center d-flex mx-auto">
                 <form #form="ngForm" (ngSubmit)="cerca(form)" class="d-flex">
-                    <input type="text" placeholder="Search post" ngModel name="ricerca"/>
+                    <input type="text" placeholder="Search by Number" ngModel name="ricerca"/>
                 <button type="submit" ><i class="bi bi-search"></i></button>
                 </form>
             </div>
@@ -57,7 +57,7 @@
     <div class="container">
         <div id="intestazione" class="row fw-bold">
             <div class="col-3 d-flex">
-                <h6>ID</h6>
+                <h6>NUMBER</h6>
                 <h6 class="mx-auto"></h6>
             </div>
             <div class="col-7">
@@ -70,7 +70,7 @@
         <div *ngFor="let brum of posts" id="riga" class="row align-items-center border border-start-0 border-end-0">
             <a name="{{brum.id}}"></a>
             <div class="col-3 d-flex align-items-center">
-                <h5 class="me-4 d-flex align-items-center">{{ brum.id }}</h5>
+                <h5 class="me-4 d-flex align-items-center ms-4">{{ brum.id }}</h5>
                 <img *ngIf="brum.userId==1" class="d-flex align-items-center mx-auto border rounded" src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/2a3e7293168665.5e5e2c0261bf6.png" alt="" />
                 <img *ngIf="brum.userId==2"  class="d-flex align-items-center mx-auto border rounded" src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/9c9a9793168665.5e5e2c026427f.png" alt="" />
                 <img *ngIf="brum.userId==3"  class="d-flex align-items-center mx-auto border rounded" src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/35652193168665.5e5e2c026478f.png" alt="" />
