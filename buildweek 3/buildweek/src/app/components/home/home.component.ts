@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Post } from 'src/app/post.interface';
 import { PostsService } from 'src/app/posts.service';
 import { Router } from '@angular/router';
+import { NgForm } from '@angular/forms';
 
 @Component({
     selector: 'app-home',
@@ -12,6 +13,7 @@ export class HomeComponent implements OnInit {
     posts: Post[] = [];
     conferma: boolean = false;
     codiceVerifica: string = '';
+    ricerca:string='';
     constructor(private ps: PostsService, private router: Router) {}
 
     ngOnInit(): void {
@@ -61,4 +63,11 @@ export class HomeComponent implements OnInit {
     guardaPost(id: string) {
         this.router.navigate(['/view/:' + id]);
     }
+
+    cerca(form:NgForm){
+        this.ricerca=form.value.ricerca
+        this.ricerca=(Number(this.ricerca)-1).toString()
+        window.location.href=`#${this.ricerca}`
+    }
+
 }

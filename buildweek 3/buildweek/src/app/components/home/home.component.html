@@ -47,7 +47,10 @@
         </div>
         <div class="col-2 d-flex">
             <div id="btn_cerca_post" class="align-items-center d-flex mx-auto">
-                <input type="text" placeholder="Search post" />
+                <form #form="ngForm" (ngSubmit)="cerca(form)" class="d-flex">
+                    <input type="text" placeholder="Search post" ngModel name="ricerca"/>
+                <button type="submit" ><i class="bi bi-search"></i></button>
+                </form>
             </div>
         </div>
     </div>
@@ -65,6 +68,7 @@
             </div>
         </div>
         <div *ngFor="let brum of posts" id="riga" class="row align-items-center border border-start-0 border-end-0">
+            <a name="{{brum.id}}"></a>
             <div class="col-3 d-flex align-items-center">
                 <h5 class="me-4 d-flex align-items-center">{{ brum.id }}</h5>
                 <img *ngIf="brum.userId==1" class="d-flex align-items-center mx-auto border rounded" src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/2a3e7293168665.5e5e2c0261bf6.png" alt="" />
@@ -74,8 +78,7 @@
                 <img *ngIf="brum.userId==5"  class="d-flex align-items-center mx-auto border rounded" src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/69c02824412809.60f18a08e91b9.jpg" alt="" />
                 <img *ngIf="brum.userId==6"  class="d-flex align-items-center mx-auto border rounded" src="https://cdn.discordapp.com/attachments/1041633323535056927/1067395070459916368/download.jpg" alt="" />
                 <img *ngIf="brum.userId==7"  class="d-flex align-items-center mx-auto border rounded" src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/17a19574352001.5c2d26e21ceea.jpg" alt="" />
-                <img *ngIf="brum.userId==8"  class="d-flex align-items-center mx-auto border rounded" src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/aa457e75012153.5c408ef77350d.jpg" alt="" />"
-
+                <img *ngIf="brum.userId==8"  class="d-flex align-items-center mx-auto border rounded" src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/aa457e75012153.5c408ef77350d.jpg" alt="" />
             </div>
 
             <div class="col-7">

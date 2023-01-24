@@ -32,7 +32,8 @@ export class CreateComponent implements OnInit {
     crea(form: NgForm) {
         this.post.body = form.value.body;
         this.post.title = form.value.title;
-        this.post.userId = 1;
+        console.log(form.value)
+        this.post.userId = form.value.id;
 
         this.ps.getPosts().subscribe((ris) => {
             this.posts = ris;
