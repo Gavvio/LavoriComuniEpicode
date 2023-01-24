@@ -11,7 +11,7 @@ import { Post } from 'src/app/post.interface';
 })
 export class CreateComponent implements OnInit {
 
-    post: Post={
+    post: Post = {
         userId: 0,
         title: '',
         body: '',
@@ -20,33 +20,39 @@ export class CreateComponent implements OnInit {
 
     posts: Post[] = [];
 
-    merdaccia:string='';
+    merdaccia: string = '';
 
-    constructor(private ps: PostsService, private http: HttpClient) {}
-    ngOnInit(): void {}
+    constructor(private ps: PostsService, private http: HttpClient) { }
+    ngOnInit(): void { }
 
     tornaHome() {
         this.ps.torna();
     }
 
     crea(form: NgForm) {
-        this.post.body = form.value.body;
-        this.post.title = form.value.title;
-        console.log(form.value)
-        this.post.userId = form.value.id;
-
-        this.ps.getPosts().subscribe((ris) => {
-            this.posts = ris;
-        });
-        let indiceMaggiore: number = 0;
-        for (let i of this.posts) {
-            if (Number(i.id) > indiceMaggiore) {
-                indiceMaggiore = Number(i.id);
-            }
+        if (form.value.body == '' || form.value.title == '' || form.value.id == '') {
+            alert('fill all inputs')
         }
-        indiceMaggiore++;
-        this.post.id = indiceMaggiore.toString();
-        this.ps.create(this.post)
+        else {
+            this.post.body = form.value.body;
+            this.post.title = form.value.title;
+            console.log(form.value)
+            this.post.userId = form.value.id;
+
+            this.ps.getPosts().subscribe((ris) => {
+                this.posts = ris;
+            });
+            let indiceMaggiore: number = 0;
+            for (let i of this.posts) {
+                if (Number(i.id) > indiceMaggiore) {
+                    indiceMaggiore = Number(i.id);
+                }
+            }
+            indiceMaggiore++;
+            this.post.id = indiceMaggiore.toString();
+            this.ps.create(this.post)
+        }
+
 
     }
 }

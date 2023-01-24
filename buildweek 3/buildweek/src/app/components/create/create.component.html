@@ -1,21 +1,22 @@
-<h1 class="text-center">Create New Post</h1>
+<h1 class="text-center mt-2" id="titolo_create">Create New Post</h1>
 
 <button class="btn btn-danger ms-5" (click)="tornaHome()">Back</button>
 
 <form class="text-center" #form="ngForm" (ngSubmit)="crea(form)">
 
-        <h4>Select User:</h4>
-      <select class="form-select form-select-lg mb-3 mx-auto w-50 text-center" aria-label=".form-select-lg example" ngModel name="id">
-        <option selected value="1" >Reverendo Green</option>
-        <option  value="2">Professor Plum</option>
-        <option  value="3">Capitano Mustard</option>
-        <option  value="4">Mrs Peacock</option>
-        <option  value="5">Dr. Joker</option>
-        <option  value="6">Miss Scarlet</option>
-        <option  value="7">Cable</option>
-        <option  value="8">Thanos</option>
+    <h4>Select User:</h4>
+    <select class="form-select form-select-lg mb-3 mx-auto w-50 text-center" aria-label=".form-select-lg example"
+        ngModel name="id">
+        <option selected value="1">Reverendo Green</option>
+        <option value="2">Professor Plum</option>
+        <option value="3">Capitano Mustard</option>
+        <option value="4">Mrs Peacock</option>
+        <option value="5">Dr. Joker</option>
+        <option value="6">Miss Scarlet</option>
+        <option value="7">Cable</option>
+        <option value="8">Thanos</option>
 
-      </select>
+    </select>
 
     <h4>Title:</h4>
     <input class="p-3 border rounded form-control w-50 mx-auto" ngModel name="title" type="text"
@@ -26,6 +27,6 @@
 
 
     <div class="d-flex justify-content-center mt-2">
-        <button class="btn btn-danger" type="submit">Invia</button>
+        <button class="btn pesca" type="submit">Invia</button>
     </div>
 </form>

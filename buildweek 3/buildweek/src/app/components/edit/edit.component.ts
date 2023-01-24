@@ -10,7 +10,7 @@ import { NgForm } from '@angular/forms';
     styleUrls: ['./edit.component.scss'],
 })
 export class EditComponent implements OnInit {
-    posts:Post[]=[];
+    posts: Post[] = [];
     post: Post = {
         userId: 0,
         title: '',
@@ -18,7 +18,7 @@ export class EditComponent implements OnInit {
         id: ''
     }
 
-    constructor(private ar: ActivatedRoute, private ps: PostsService) {}
+    constructor(private ar: ActivatedRoute, private ps: PostsService) { }
 
     ngOnInit(): void {
         let id: number = this.ar.snapshot.params['id'];
@@ -40,6 +40,6 @@ export class EditComponent implements OnInit {
     modifica(form: NgForm) {
         this.post.body = form.value.body;
         this.post.title = form.value.title;
-        this.ps.edit(this.post.id,this.post)
+        this.ps.edit(this.post.id, this.post)
     }
 }
