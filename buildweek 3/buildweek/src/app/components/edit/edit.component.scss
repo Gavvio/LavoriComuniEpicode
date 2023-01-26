@@ -60,7 +60,6 @@
 
 .thanos {
     background-image: url(../../../assets/IMG/notte_stellato.jpg);
-
     #titolo_edit {
         color: rgb(147, 182, 218);
     }
@@ -72,7 +71,7 @@
 }
 
 .contenitore_card {
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.600);
     border-radius: 5px;
     padding: 10px;
 }
@@ -81,4 +80,8 @@
     width: 175px;
     height: 175px;
     object-fit: cover;
+}
+
+.textarea_edit{
+    background-color: rgba(255, 255, 255, 0.700) ;
 }
