@@ -1,21 +1,23 @@
-.footer_pc{
+.footer_pc {
     background-color: rgba(0, 0, 0, 0.866);
     color: white;
-    & a{
+
+    & a {
         text-decoration: none;
         color: white;
     }
 
-    & a:hover{
+    & a:hover {
         transform: scale(1.2);
         transition-duration: 0.8s;
     }
 }
 
-.footer_mobile{
+.footer_mobile {
     background-color: rgba(0, 0, 0, 0.866);
     color: white;
-    & a{
+
+    & a {
         font-size: 10px;
         text-decoration: none;
         color: white;

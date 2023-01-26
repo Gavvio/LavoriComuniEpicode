@@ -16,12 +16,12 @@ export class ViewComponent implements OnInit {
         body: '',
         id: ''
     }
-    decisione:string='';
+    decisione: string = '';
     constructor(private ar: ActivatedRoute, private ps: PostsService) { }
 
     ngOnInit(): void {
         let id: string = this.ar.snapshot.params['id'];
-        this.decisione=id;
+        this.decisione = id;
         this.ps.getPosts().subscribe((ris) => {
             this.posts = ris;
             for (let a of this.posts) {

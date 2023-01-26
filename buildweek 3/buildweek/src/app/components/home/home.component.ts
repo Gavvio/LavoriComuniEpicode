@@ -59,9 +59,9 @@ export class HomeComponent implements OnInit {
         this.router.navigate(['/view/:' + id]);
     }
 
-    cerca(){
+    cerca() {
         // this.ricerca = form.value.ricerca
-        if (this.posts[0].id==this.ricerca) {
+        if (this.posts[0].id == this.ricerca) {
             window.location.href = '#'
         }
         else {
@@ -80,7 +80,7 @@ export class HomeComponent implements OnInit {
                 alert('post not found')
             }
         }
-        this.ricerca=''
+        this.ricerca = ''
     }
 
 }

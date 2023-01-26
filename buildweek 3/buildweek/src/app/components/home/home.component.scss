@@ -8,7 +8,7 @@ html {
     background-repeat: repeat;
 }
 
-.controllo_testo{
+.controllo_testo {
     display: -webkit-box;
     -webkit-line-clamp: 5;
     -webkit-box-orient: vertical;
@@ -25,7 +25,7 @@ html {
     height: 100px;
 }
 
-#navbar_mobile{
+#navbar_mobile {
     background-color: rgba(222, 184, 135, 0.678);
     position: sticky;
     border-radius: 0 0 5px 5px;
@@ -35,7 +35,7 @@ html {
     backdrop-filter: blur(20px);
 }
 
-#colore_navbar{
+#colore_navbar {
     background-color: rgba(222, 184, 135, 0.678);
 }
 
@@ -47,7 +47,7 @@ html {
     cursor: pointer;
 }
 
-#titolo_mobile{
+#titolo_mobile {
     font-family: 'Permanent Marker', cursive;
     font-size: 28px;
     color: rgb(23, 60, 97);
@@ -127,7 +127,7 @@ html {
     }
 }
 
-#riga_mobile{
+#riga_mobile {
     height: 440px;
 
 }
@@ -147,4 +147,26 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
+}
+
+.freccia_in_alto {
+    position: fixed;
+    top: 20vh;
+    right: 15px;
+}
+
+.freccia_in_basso {
+    position: fixed;
+    bottom: 20vh;
+    right: 15px;
+}
+
+#freccia_giu {
+    color: rgb(130, 24, 193,0.8);
+    font-size: 30px;
+}
+
+#freccia_su {
+    color: rgb(130, 24, 193,0.8);
+    font-size: 30px;
 }
